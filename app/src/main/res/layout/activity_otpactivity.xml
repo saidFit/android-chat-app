@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.OTPActivity">
+
+    <ImageView
+        android:id="@+id/imagePhone"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/phone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="18dp"
+        android:scaleType="centerCrop"
+
+        />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imagePhone"
+        app:layout_constraintRight_toRightOf="@+id/imagePhone"
+        app:layout_constraintLeft_toLeftOf="@+id/imagePhone"
+        android:text="Verify Your Number Phone"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintRight_toRightOf="@+id/textView1"
+        app:layout_constraintLeft_toLeftOf="@+id/textView1"
+        android:text="ChatsApp will send you a SMS to verify your number phone."
+        android:layout_marginTop="7dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_margin="16dp"
+        android:elevation="18dp"
+
+        app:cardCornerRadius="13dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="14dp"
+            android:orientation="vertical"
+            >
+
+            <com.mukeshsolanki.OtpView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:itemBackground="@color/gray_200"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_700"
+                app:OtpHideLineWhenFilled="true"
+                android:layout_gravity="center"
+                app:OtpItemCount="6"
+                app:OtpItemSpacing="6dp"
+                app:OtpLineColor="@color/blue_500"
+                app:OtpState_filled="true"
+                app:OtpViewType="line"
+                />
+
+            <Button
+                android:id="@+id/ContinueBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:layout_marginTop="19dp"
+                android:backgroundTint="@color/green_500"
+                android:elevation="14dp"
+                />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

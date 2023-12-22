@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_700">#FF018786</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="myCustomColor">#FF5733</color>
+    <color name="orange">#FFA500</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_orange">#FF5733</color>
+    <!--gray-colors-->
+    <color name="gray_50">#f9fafb</color>
+    <color name="gray_100">#f3f4f6</color>
+    <color name="gray_200">#e5e7eb</color>
+    <color name="gray_300">#d1d5db</color>
+    <color name="gray_400">#9ca3af</color>
+    <color name="gray_500">#6b7280</color>
+    <color name="gray_600">#4b5563</color>
+    <color name="gray_700">#374151</color>
+    <color name="gray_800">#1f2937</color>
+    <color name="gray_900">#111827</color>
+    <color name="gray_950">#030712</color>
+
+    <!--green-colors-->
+    <color name="green_50">#f0fdf4</color>
+    <color name="green_100">#dcfce7</color>
+    <color name="green_200">#bbf7d0</color>
+    <color name="green_300">#86efac</color>
+    <color name="green_400">#4ade80</color>
+    <color name="green_500">#22c55e</color>
+    <color name="green_600">#16a34a</color>
+    <color name="green_700">#15803d</color>
+    <color name="green_800">#166534</color>
+    <color name="green_900">#14532d</color>
+    <color name="green_950">#052e16</color>
+
+    <!--teal-colors-->
+    <color name="teal_50">#f0fdfa</color>
+    <color name="teal_100">#ccfbf1</color>
+    <color name="teal_20">#99f6e4</color>
+    <color name="teal_300">#5eead4</color>
+    <color name="teal_400">#2dd4bf</color>
+    <color name="teal_500">#14b8a6</color>
+
+    <!--sky-colors-->
+    <color name="sky_50">#f0f9ff</color>
+    <color name="sky_100">#e0f2fe</color>
+    <color name="sky_200">#bae6fd</color>
+    <color name="sky_300">#7dd3fc</color>
+    <color name="sky_400">#38bdf8</color>
+    <color name="sky_500">#0ea5e9</color>
+
+    <!--blue-colors-->
+    <color name="blue_50">#eff6ff</color>
+    <color name="blue_100">#dbeafe</color>
+    <color name="blue_200">#bfdbfe</color>
+    <color name="blue_300">#93c5fd</color>
+    <color name="blue_400">#60a5fa</color>
+    <color name="blue_500">#3b82f6</color>
+
+    <!--indigo-colors-->
+    <color name="indigo_50">#eef2ff</color>
+    <color name="indigo_100">#e0e7ff</color>
+    <color name="indigo_200">#c7d2fe</color>
+    <color name="indigo_300">#a5b4fc</color>
+    <color name="indigo_400">#818cf8</color>
+    <color name="indigo_500">#6366f1</color>
+
+    <!--Rose-colors-->
+    <color name="rose_50">#fff1f2</color>
+    <color name="rose_100">#ffe4e6</color>
+    <color name="rose_200">#fecdd3</color>
+    <color name="rose_300">#fda4af</color>
+    <color name="rose_400">#fb7185</color>
+    <color name="rose_500">#f43f5e</color>
+    <color name="rose_600">#be123c</color>
+    <color name="rose_700">#9f1239</color>
+
+    <!--Yellow-colors-->
+    <color name="yellow_50">#fefce8</color>
+    <color name="yellow_100">#fef9c3</color>
+    <color name="yellow_200">#fef08a</color>
+    <color name="yellow_300">#fde047</color>
+    <color name="yellow_400">#facc15</color>
+    <color name="yellow_500">#eab308</color>
+    <color name="yellow_600"> #ca8a04</color>
+    <color name="yellow_700">#a16207</color>
+
+
+
+    <!--Orange-colors-->
+    <color name="orange_50">#fff7ed</color>
+    <color name="orange_100">#ffedd5</color>
+    <color name="orange_200">#fed7aa</color>
+    <color name="orange_300">#fdba74</color>
+    <color name="orange_400">#fb923c</color>
+    <color name="orange_500">#f97316</color>
+    <color name="orange_600">#ea580c</color>
+    <color name="orange_700">#c2410c</color>
+
+
+
+    <!--Alert-primary -->
+    <color name="color_primary">#004085</color>
+    <color name="background_primary">#cce5ff</color>
+    <color name="border_primary">#b8daff</color>
+    <!--Alert-secondary -->
+    <color name="color_secondary">#383d41</color>
+    <color name="background_secondary">#e2e3e5</color>
+    <color name="border_secondary">#d6d8db</color>
+    <!--Alert-success -->
+    <color name="color_success">#155724</color>
+    <color name="background_success">#d4edda</color>
+    <color name="border_success">#c3e6cb</color>
+    <!--Alert-danger -->
+    <color name="color_danger">#721c24</color>
+    <color name="red">#ED0404</color>
+    <color name="background_danger">#f8d7da</color>
+    <color name="border_danger">#f5c6cb</color>
+    <!--Alert-warning -->
+    <color name="color_warning">#856404</color>
+    <color name="background_warning">#fff3cd</color>
+    <color name="border_warning">#ffeeba</color>
+</resources>
