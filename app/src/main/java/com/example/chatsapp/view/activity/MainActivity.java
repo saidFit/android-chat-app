@@ -58,11 +58,12 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
+        database = FirebaseDatabase.getInstance();
         dialog = new ProgressDialog(this);
         dialog.setMessage("image uploading...");
 
-        database = FirebaseDatabase.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
         users = new ArrayList<>();
         userStatuses = new ArrayList<>();
 
@@ -71,14 +72,21 @@ public class MainActivity extends AppCompatActivity {
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        user = snapshot.getValue(User.class);
+                        if (snapshot.exists()) {
+                            user = snapshot.getValue(User.class);
+
+                            // Now you can safely access user.getName() and other properties
+                        } else {
+                            // Handle the case where the data doesn't exist
+                        }
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-
+                        // Handle the error if needed
                     }
                 });
+
 
         database.getReference().child("stories").addValueEventListener(new ValueEventListener() {
             @Override
@@ -104,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
 
                     }
 
+                    Log.d("userStatuses", String.valueOf(userStatuses));
+
                     topStatusAdapter.notifyDataSetChanged();
                 }
             }
@@ -127,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
         binding.statusList.setAdapter(topStatusAdapter);
 
 
+        binding.recyclerView.showShimmer();     // to start showing shimmer
         database.getReference().child("Users").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -139,11 +150,13 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
+                binding.recyclerView.hideShimmer();
                 conversationAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
 
             }
         });
@@ -238,11 +251,29 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        // Notify the adapter about the data change
+//        conversationAdapter.notifyDataSetChanged();
+//    }
+
+
     @Override
     protected void onResume() {
         super.onResume();
-        // Notify the adapter about the data change
-        conversationAdapter.notifyDataSetChanged();
+        String currentId = FirebaseAuth.getInstance().getUid();
+
+        // Go online when the activity is resumed
+        database.getReference().child("presence").child(currentId).setValue("Online");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Go offline when the activity is paused
+        database.goOffline();
     }
 
 

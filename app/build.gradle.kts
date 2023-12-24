@@ -60,6 +60,7 @@ dependencies {
     implementation ("com.github.3llomi:CircularStatusView:V1.0.3")
     implementation ("com.github.OMARIHAMZA:StoryView:1.0.2-alpha")
     // for reload data as instagram
-    implementation ("com.github.sharish:ShimmerRecyclerView:v1.0")
+    implementation ("com.facebook.shimmer:shimmer:0.5.0")
+    implementation ("com.todkars:shimmer-recyclerview:0.4.1")
 
 }
